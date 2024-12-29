@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export const Counter = () => {
   const [count, setCount] = useState(0);
@@ -11,6 +11,7 @@ export const Counter = () => {
     <section className="border-blue-400 -mx-4 mt-4 rounded border border-dashed p-4">
       <div>Count: {count}</div>
       <button
+        type="button"
         onClick={handleIncrement}
         className="rounded-sm bg-black px-2 py-0.5 text-sm text-white"
       >

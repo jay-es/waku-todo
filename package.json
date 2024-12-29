@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "waku dev",
     "build": "waku build",
-    "start": "waku start"
+    "start": "waku start",
+    "format": "biome format --write",
+    "lint": "biome lint --write"
   },
   "dependencies": {
     "react": "19.0.0",
@@ -15,6 +17,7 @@
     "waku": "0.21.11"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
     "autoprefixer": "10.4.20",
