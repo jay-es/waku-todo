@@ -1,18 +1,13 @@
 export const Footer = () => {
   return (
-    <footer className="p-6 lg:fixed lg:bottom-0 lg:left-0">
-      <div>
-        visit{" "}
-        <a
-          href="https://waku.gg/"
-          target="_blank"
-          rel="noreferrer"
-          className="mt-4 inline-block underline"
-        >
-          waku.gg
-        </a>{" "}
-        to learn more
-      </div>
+    <footer className="p-6 fixed bottom-0 text-center w-full">
+      <a
+        href="https://github.com/jay-es/waku-todo"
+        target="_blank"
+        rel="noreferrer"
+      >
+        &copy;<span className="underline">jay-es</span>
+      </a>
     </footer>
   );
 };
