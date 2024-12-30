@@ -43,6 +43,18 @@ export async function getTodos(): Promise<Todo[]> {
   return todos;
 }
 
+export async function createTodo(description: string) {
+  await new Promise((res) => setTimeout(res, 200));
+
+  const newTodo: Todo = {
+    id: (todos.at(-1)?.id ?? 0) + 1,
+    description,
+    createdAt: new Date(),
+    completedAt: null,
+  };
+
+  todos.push(newTodo);
+}
 export async function toggleTodo(id: number) {
   await new Promise((res) => setTimeout(res, 200));
   const todo = todos.find((todo) => todo.id === id);

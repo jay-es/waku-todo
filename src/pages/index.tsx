@@ -1,5 +1,6 @@
 import { Link } from "waku";
 
+import { AddTodoButton } from "../components/add-todo-button";
 import { TodoList } from "../components/todo-list";
 
 export default async function HomePage() {
@@ -11,7 +12,10 @@ export default async function HomePage() {
       <h1 className="text-4xl font-bold tracking-tight">{data.headline}</h1>
       <p>{data.body}</p>
 
-      <TodoList />
+      <section className="my-4 space-y-4">
+        <TodoList />
+        <AddTodoButton />
+      </section>
 
       <Link to="/about" className="mt-4 inline-block underline">
         About page
@@ -22,7 +26,7 @@ export default async function HomePage() {
 
 const getData = async () => {
   const data = {
-    title: "Waku",
+    title: "Waku Todo",
     headline: "Waku",
     body: "Hello world!",
   };

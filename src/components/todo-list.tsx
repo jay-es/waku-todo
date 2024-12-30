@@ -12,7 +12,7 @@ export const TodoList = async () => {
   const todos = await getTodos();
 
   return (
-    <ul className="my-4 space-y-1">
+    <ul className="space-y-1">
       {todos.map((todo) => (
         <li key={todo.id}>
           <TodoListItem todo={todo} />
