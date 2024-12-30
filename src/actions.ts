@@ -1,3 +1,3 @@
 "use server";
 
-export { createTodo, toggleTodo } from "./mock-todos";
+export { createTodo, toggleTodo, deleteTodo } from "./mock-todos";

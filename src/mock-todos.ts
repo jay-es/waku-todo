@@ -55,6 +55,7 @@ export async function createTodo(description: string) {
 
   todos.push(newTodo);
 }
+
 export async function toggleTodo(id: number) {
   await new Promise((res) => setTimeout(res, 200));
   const todo = todos.find((todo) => todo.id === id);
@@ -64,4 +65,15 @@ export async function toggleTodo(id: number) {
   }
 
   todo.completedAt = todo.completedAt ? null : new Date();
+}
+
+export async function deleteTodo(id: number) {
+  await new Promise((res) => setTimeout(res, 200));
+  const index = todos.findIndex((todo) => todo.id === id);
+
+  if (index < 0) {
+    throw new Error("not found");
+  }
+
+  todos.splice(index, 1);
 }

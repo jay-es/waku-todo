@@ -20,7 +20,7 @@ export const AddTodoButton = () => {
   return (
     <button
       type="button"
-      className="bg-slate-800 text-white rounded-lg py-1 px-3"
+      className="bg-slate-800 text-white rounded-lg py-1 px-3 hover:bg-opacity-85"
       onClick={handleClick}
     >
       + add todo
