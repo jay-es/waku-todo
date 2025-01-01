@@ -1,4 +1,5 @@
-import { type Todo, getTodos } from "../mock-todos";
+import { db } from "../db";
+import { type Todo, todosTable } from "../db/schema";
 import { DeleteTodoButton } from "./delete-todo-button";
 import { TodoCheckbox } from "./todo-checkbox";
 
@@ -11,7 +12,7 @@ const TodoListItem = ({ todo }: { todo: Todo }) => (
 );
 
 export const TodoList = async () => {
-  const todos = await getTodos();
+  const todos = await db.select().from(todosTable);
 
   return (
     <ul className="space-y-1">

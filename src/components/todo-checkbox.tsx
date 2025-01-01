@@ -2,7 +2,7 @@
 
 import { startTransition, useActionState, useOptimistic } from "react";
 import { toggleTodo } from "../actions";
-import type { Todo } from "../mock-todos";
+import type { Todo } from "../db/schema";
 
 export const TodoCheckbox = ({ todo }: { todo: Todo }) => {
   const [checked, toggleChecked] = useActionState(async (state) => {

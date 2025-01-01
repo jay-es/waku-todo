@@ -2,7 +2,7 @@
 
 import { useRouter_UNSTABLE } from "waku";
 import { deleteTodo } from "../actions";
-import type { Todo } from "../mock-todos";
+import type { Todo } from "../db/schema";
 
 export const DeleteTodoButton = ({ todo }: { todo: Todo }) => {
   const router = useRouter_UNSTABLE();
