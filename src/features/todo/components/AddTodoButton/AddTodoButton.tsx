@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter_UNSTABLE } from "waku";
-import { createTodo } from "../actions";
+import { createTodo } from "./actions";
 
 export const AddTodoButton = () => {
   const router = useRouter_UNSTABLE();

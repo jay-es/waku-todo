@@ -1,7 +1,7 @@
 import { Link } from "waku";
 
-import { AddTodoButton } from "../components/add-todo-button";
-import { TodoList } from "../components/todo-list";
+import { AddTodoButton } from "../features/todo/components/AddTodoButton/AddTodoButton";
+import { TodoList } from "../features/todo/components/TodoList/TodoList";
 
 export default async function HomePage() {
   const data = await getData();

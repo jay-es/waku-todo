@@ -1,7 +1,7 @@
-import { db } from "../db";
-import { type Todo, todosTable } from "../db/schema";
-import { DeleteTodoButton } from "./delete-todo-button";
-import { TodoCheckbox } from "./todo-checkbox";
+import type { Todo } from "../../../../db/schema";
+import { DeleteTodoButton } from "./DeleteTodoButton";
+import { TodoCheckbox } from "./TodoCheckbox";
+import { getTodos } from "./getTodos";
 
 const TodoListItem = ({ todo }: { todo: Todo }) => (
   <div className="grid grid-cols-[auto_1fr_auto] gap-x-1.5 items-center">
@@ -12,7 +12,7 @@ const TodoListItem = ({ todo }: { todo: Todo }) => (
 );
 
 export const TodoList = async () => {
-  const todos = await db.select().from(todosTable);
+  const todos = await getTodos();
 
   return (
     <ul className="space-y-1">

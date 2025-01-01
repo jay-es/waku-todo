@@ -1,12 +1,8 @@
 "use server";
 
 import { eq, sql } from "drizzle-orm";
-import { db } from "./db";
-import { todosTable } from "./db/schema";
-
-export async function createTodo(description: string) {
-  await db.insert(todosTable).values({ description });
-}
+import { db } from "../../../../db";
+import { todosTable } from "../../../../db/schema";
 
 export async function toggleTodo(id: number) {
   const [todo] = await db

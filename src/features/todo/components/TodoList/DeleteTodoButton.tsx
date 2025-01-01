@@ -1,8 +1,8 @@
 "use client";
 
 import { useRouter_UNSTABLE } from "waku";
-import { deleteTodo } from "../actions";
-import type { Todo } from "../db/schema";
+import type { Todo } from "../../../../db/schema";
+import { deleteTodo } from "./actions";
 
 export const DeleteTodoButton = ({ todo }: { todo: Todo }) => {
   const router = useRouter_UNSTABLE();
