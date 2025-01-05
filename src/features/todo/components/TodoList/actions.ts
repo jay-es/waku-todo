@@ -1,8 +1,8 @@
 "use server";
 
-import { eq, sql } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { db } from "../../../../db";
-import { todosTable } from "../../../../db/schema";
+import { currentTimestampSql, todosTable } from "../../../../db/schema";
 
 export async function toggleTodo(id: number) {
   const [todo] = await db
@@ -16,7 +16,7 @@ export async function toggleTodo(id: number) {
 
   await db
     .update(todosTable)
-    .set({ completedAt: todo.completedAt ? null : sql`(CURRENT_TIMESTAMP)` })
+    .set({ completedAt: todo.completedAt ? null : currentTimestampSql })
     .where(eq(todosTable.id, id));
 }
 
